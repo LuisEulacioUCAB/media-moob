@@ -1,0 +1,22 @@
+overwrite: true
+schema: https://api.escuelajs.co/graphql
+documents: "test-next/src/**/*.graphql"
+generates:
+  src/lib/types/generated.ts:
+    plugins:
+      - add:
+          content: '/* eslint-disable */'
+      - typescript
+      - typescript-operations:
+          onlyOperationTypes: true
+          avoidOptionals:
+            field: true
+      - typescript-react-apollo
+    config:
+      maybe: T
+      scalars:
+        JSON: {}
+        DateTime: string
+        Date: string
+        BigInt: string
+        Time: string
