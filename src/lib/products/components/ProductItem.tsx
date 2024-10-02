@@ -32,13 +32,22 @@ export const ProductItem: React.FC<ProductItemProps> = (
         </AnimateHeight>
         <Image src={product?.images[0] as string} alt={product?.title as string} fill className="rounded-lg" />
 
-        <div className="absolute w-full top-0"
-             style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 10px' }}>
+        <div className="w-full top-0"
+             style={{
+               display: 'flex',
+               justifyContent: 'space-between',
+               alignItems: 'center',
+               padding: 10,
+               position: 'absolute',
+               width: '100%',
+             }}>
           <div
-            className=" bg-black text-white uppercase p-2 rounded-lg text-xs ">{product?.category.name || 'Sin Categoria'}</div>
+            className='rounded-lg'
+            style={{ backgroundColor: 'black', color: 'white', transform: 'uppercase', padding: 5 , fontSize:12}}
+            >{product?.category.name || 'Sin Categoria'}</div>
           <div
-            className="uppercase p-2 rounded-lg text-md font-bold text-black"
-            style={{ backgroundColor: '#CCFF00' }}>$ {product?.price || 0}</div>
+            className='rounded-lg font-bold'
+            style={{ backgroundColor: '#CCFF00', color: 'black', transform: 'uppercase', padding: 5 , fontSize:16 }}>$ {product?.price || 0}</div>
         </div>
 
 
