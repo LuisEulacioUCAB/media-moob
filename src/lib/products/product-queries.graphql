@@ -3,6 +3,8 @@ query products($limit:Int, $offset:Int){
         id
         images
         title
+        description
+        price
         category{
             id
             name

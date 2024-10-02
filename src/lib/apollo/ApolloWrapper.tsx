@@ -1,3 +1,5 @@
+"use client";
+
 import React, { ReactNode } from 'react';
 import {
   ApolloNextAppProvider,
@@ -9,6 +11,6 @@ type ApolloProviderProps = {
   children: ReactNode;
 }
 
-export const ApolloProvider: React.FC<ApolloProviderProps> = ({children})=>{
+export const ApolloWrapper: React.FC<ApolloProviderProps> = ({children})=>{
   return <ApolloNextAppProvider makeClient={apolloClient}>{children}</ApolloNextAppProvider>
 }

@@ -1,6 +1,6 @@
 overwrite: true
 schema: https://api.escuelajs.co/graphql
-documents: "test-next/src/**/*.graphql"
+documents: "src/**/*.graphql"
 generates:
   src/lib/types/generated.ts:
     plugins:
